@@ -4,7 +4,7 @@ namespace SpriteKind {
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     projectile = sprites.createProjectileFromSprite(assets.image`Dart1`, mySprite, 0, -100)
     projectile.startEffect(effects.fire)
-    mySprite.sayText("pew")
+    music.pewPew.play()
 })
 sprites.onOverlap(SpriteKind.Enemy, SpriteKind.Projectile, function (sprite, otherSprite) {
     sprite.destroy(effects.ashes, 100)
@@ -81,7 +81,6 @@ true
 statusbar = statusbars.create(20, 4, StatusBarKind.Health)
 statusbar.attachToSprite(mySprite, 30, 0)
 enemySpeed = 50
-mySprite.sayText("i am going to run out of fuel soon")
 effects.starField.startScreenEffect()
 music.playMelody("E D G F B A C5 B ", 120)
 game.onUpdateInterval(5000, function () {
