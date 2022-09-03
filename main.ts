@@ -82,7 +82,7 @@ statusbar = statusbars.create(20, 4, StatusBarKind.Health)
 statusbar.attachToSprite(mySprite, 30, 0)
 enemySpeed = 50
 effects.starField.startScreenEffect()
-music.playMelody("E D G F B A C5 B ", 120)
+music.playMelody("C5 G B A F A C5 B ", 120)
 game.onUpdateInterval(5000, function () {
     myFuel = sprites.createProjectileFromSprite(assets.image`Fuel`, mySprite, randint(100, 50), 80)
     myFuel.x = randint(5, 155)
